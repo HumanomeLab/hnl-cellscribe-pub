@@ -102,5 +102,5 @@ python inference.py config.yaml
 ## ライセンス
 
 - 本開発には、[scFoundation](https://github.com/biomap-research/scFoundation)  のソースコードを参考・改変いたしました。
-- 本レポジトリのソースコードおよびモデルは、Apache-2.0ライセンスの下で配布されています。
+- 本レポジトリのソースコードのライセンスは、各ファイルに記載の内容に従います。
 
