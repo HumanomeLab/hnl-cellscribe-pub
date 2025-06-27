@@ -1,0 +1,36 @@
+demo: True
+
+input:
+  data_path: demo_data.csv
+  pre_normalized: F
+
+output:
+  output_type: cell
+  pool_type: all
+  tgthighres: f1
+  is_mixed_precision: False
+  save_npy_path: embedding.npy
+  save_csv_path: embedding.csv
+  pkl_path: CellScribe-300M-step10k.pkl
+
+preprocess:
+  gene_dict_path: gene_dictionary_v2.json
+  expr_pad_value: 0
+  pad_token: 20005
+  S_token: 20006
+  T_token: 20007
+
+model:
+  arch:
+    max_seq_len: 20010
+    pad_token: 20005
+    encoder:
+      d_model: 1280
+      n_layers: 12
+      nheads: 16
+      ff_mult: 4
+    decoder:
+      d_model: 1024
+      n_layers: 6
+      nheads: 16
+      dim_head: 32
